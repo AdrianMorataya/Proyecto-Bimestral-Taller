@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "cc77105b-f946-4a04-8063-98b8b7478d21",
+		"name": "API-SuperMarket-2023147",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37585425"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Jose_Balenciaga147",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/PC/Documents/LAB2 TALLER/Taller_Lab2-2023147/public/uploads/profile-pictures/deadpool-and-wolverine-trailer-san-valentin-1738721821016.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"adrian@gmail.com\",\r\n    \"password\": \"Adrian_Morataya147\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/findUser/67acb3c3f0133551fb649b6d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"user",
+								"findUser",
+								"67acb3c3f0133551fb649b6d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/deleteUser/67acb3c3f0133551fb649b6d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"user",
+								"deleteUser",
+								"67acb3c3f0133551fb649b6d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/updatePassword/67acb3c3f0133551fb649b6d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"user",
+								"updatePassword",
+								"67acb3c3f0133551fb649b6d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/superMarket/v1/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"superMarket",
+								"v1",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Image",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/PC/Documents/LAB2 TALLER/Taller_Lab2-2023147/public/uploads/profile-pictures/KINAL.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/updateImage/67acb3c3f0133551fb649b6d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"user",
+								"updateImage",
+								"67acb3c3f0133551fb649b6d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cocacola\",\r\n    \"description\": \"Refresco\",\r\n    \"price\": \"23\",\r\n    \"amount\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pepsi\",\r\n    \"description\": \"Refresco\",\r\n    \"price\": \"15\",\r\n    \"amount\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/findProduct/67acb534f0133551fb649b76",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"product",
+								"findProduct",
+								"67acb534f0133551fb649b76"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/adoptionSystem/v1/pet/deletePet/67aabb982eb4342b0320410d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pet",
+								"deletePet",
+								"67aabb982eb4342b0320410d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Product Available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/getProductAvailable",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"product",
+								"getProductAvailable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Product Unavailable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/getProductUnavailable",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"product",
+								"getProductUnavailable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bebidas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/createCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Categorys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzUyODMsImV4cCI6MTczOTM3ODg4M30.3Rl2AkAVoA_rWKHmUOP25SNo3QFwRlxfS5vLTsdM-QQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/deleteCategory/67acc24e3b2b07a2e188009b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								"deleteCategory",
+								"67acc24e3b2b07a2e188009b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Refrescos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/updateCategory/67acc24e3b2b07a2e188009b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								"updateCategory",
+								"67acc24e3b2b07a2e188009b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
