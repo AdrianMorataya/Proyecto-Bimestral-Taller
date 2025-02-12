@@ -7,6 +7,7 @@ import { hasRoles } from "./validate-roles.js";
 
 export const createProductValidator = [
     validateJWT,
+    hasRoles("ADMIN_ROLE"),
     body("name").notEmpty().withMessage("El nombre es requerido"),
     body("description").notEmpty().withMessage("La descripción es requerida"),
     body("price").isInt({ min: 0 }).withMessage("El precio debe ser un número entero positivo"),
@@ -23,8 +24,15 @@ export const getProductByIdValidator = [
     handleErrors
 ];
 
+export const getProductValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
+
 export const updateProductValidator = [
     validateJWT,
+    hasRoles("ADMIN_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("id").custom(productExists),
     body("name").optional().notEmpty().withMessage("El nombre es requerido"),
@@ -37,6 +45,7 @@ export const updateProductValidator = [
 
 export const deleteProductValidator = [
     validateJWT,
+    hasRoles("ADMIN_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("id").custom(productExists),
     validarCampos,

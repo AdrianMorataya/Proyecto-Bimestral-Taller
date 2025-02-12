@@ -5,55 +5,73 @@ import Category from '../category/category.model.js';
 
 export const saveProduct = async (req, res) => {
     try {
-        const data = req.body;
+        const { name, description, price, amount, status, categorys } = req.body;
 
-        const product = new Product({
-            ...data
+        const categoryId = categorys || "67ad0a98a2a5eeaa2dd27999";
+
+        const category = await Category.findById(categoryId);
+        if (!category) {
+            return res.status(404).json({ message: "Categoría no encontrada" });
+        }
+
+        const newProduct = new Product({
+            name,
+            description,
+            price,
+            amount,
+            status,
+            categorys: categoryId
         });
 
-        await product.save();
+        await newProduct.save();
+
+        if (categoryId !== "67ad0a98a2a5eeaa2dd27999") {
+            category.products.push(newProduct._id);
+            await category.save();
+        }
 
         res.status(200).json({
             success: true,
-            product
+            message: "Producto guardado y categoría actualizada",
+            product: newProduct
         });
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: 'Error al guardar el producto',
-            error
+            message: "Error al guardar el producto",
+            error: error.message
         });
     }
-}
+};
 
 export const getProductsAvailables = async(req, res) => {
-    try{
-        const { limits = 3, from = 0} = req.query
-        const query = {status: "AVAILABLE"}
+    try {
+        const { limits = 10, from = 0 } = req.query;
 
-        const product = await Product.find().populate("categorys", "name");
+        const query = { status: "AVAILABLE" };
 
-        const [ total, products ] = await Promise.all([
+        const [total, products] = await Promise.all([
             Product.countDocuments(query),
             Product.find(query)
                 .skip(Number(from))
                 .limit(Number(limits))
-        ])
+                .populate("categorys", "name") 
+        ]);
 
         return res.status(200).json({
             success: true,
             total,
             products
-        })
-
-    }catch(err){
+        });
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error al listar los productos",
             error: err.message
-        })
+        });
     }
-}
+};
+
 
 export const getProductsUnavailables = async(req, res) => {
     try{

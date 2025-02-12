@@ -65,3 +65,34 @@ export const login = async (req, res) => {
         })
     }
 }
+
+const createAdminUser = async () => {
+    try {
+        const adminExists = await User.findOne({ role: "ADMIN_ROLE" });
+ 
+        if (adminExists) {
+            console.log("El usuario admin ya existe");
+            return;
+        }
+ 
+        const adminData = {
+            name: 'Adrian',
+            surname: 'Morataya',
+            username: 'adriann_m',
+            email: 'adrian@gmail.com',
+            phone: '37405445',
+            password: 'Adrian_Morataya147',
+            role: 'ADMIN_ROLE',
+        };
+
+        const encryptedPassword = await hash(adminData.password);
+        adminData.password = encryptedPassword;
+        await User.create(adminData);
+ 
+        console.log("Admin ingresado correctamente");
+    } catch (err) {
+        console.error("Error al crear el admin:", err.message);
+    }
+};
+
+createAdminUser();

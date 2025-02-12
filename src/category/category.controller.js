@@ -56,7 +56,8 @@ export const deleteCategory = async (req, res) => {
 
 export const getAllCategorys = async (req, res) => {
     try {
-        const categorys = await Category.find().populate("products", "name");
+        const categorys = await Category.find()
+            .populate("products");
 
         return res.status(200).json({
             message: "Categorias disponibles",
@@ -69,6 +70,9 @@ export const getAllCategorys = async (req, res) => {
         });
     }
 };
+
+
+
 
 const createDefaultCategory = async () => {
     const categoryExists = await Category.findOne({ name: "Sin Categoría" });

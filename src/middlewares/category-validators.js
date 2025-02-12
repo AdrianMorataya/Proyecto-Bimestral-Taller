@@ -7,6 +7,7 @@ import { hasRoles } from "./validate-roles.js";
 
 export const createCategoryValidator = [
     validateJWT,
+    hasRoles("ADMIN_ROLE"),
     body("name").notEmpty().withMessage("El nombre es requerido"),
     validarCampos,
     handleErrors
@@ -20,8 +21,15 @@ export const getCategoryByIdValidator = [
     handleErrors
 ];
 
+export const getCategoryValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
+
 export const updateCategoryValidator = [
     validateJWT,
+    hasRoles("ADMIN_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("id").custom(categoryExists),
     body("name").optional().notEmpty().withMessage("El nombre es requerido"),
@@ -31,6 +39,7 @@ export const updateCategoryValidator = [
 
 export const deleteCategoryValidator = [
     validateJWT,
+    hasRoles("ADMIN_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("id").custom(categoryExists),
     validarCampos,

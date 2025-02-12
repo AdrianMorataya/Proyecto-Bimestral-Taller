@@ -22,13 +22,13 @@ const productSchema = new Schema({
         required: true,
         enum: ["AVAILABLE", "UNAVAILABLE"]
     },
-    category: {
+    categorys: {
         type: Schema.Types.ObjectId,
         ref: "Category",
-        default: "64d5e1b0c7a8d1b6789abcd0"
-    },
-    categorys: [{ type: Schema.Types.ObjectId, ref: "Category" }]
-}, {
+        default: "67ad0a98a2a5eeaa2dd27999"
+    }
+}, 
+{
     timestamps: true,
     versionKey: false
 });

@@ -1,11 +1,11 @@
 import { Router } from "express";
 import { getAllCategorys, createCategory, updateCategory, deleteCategory} from "./category.controller.js";
-import { createCategoryValidator, getCategoryByIdValidator, updateCategoryValidator, deleteCategoryValidator } from "../middlewares/category-validators.js";
+import { createCategoryValidator, getCategoryByIdValidator, updateCategoryValidator, deleteCategoryValidator, getCategoryValidator } from "../middlewares/category-validators.js";
 
 
 const router = Router()
 
-router.get("/", getAllCategorys)
+router.get("/", getCategoryValidator ,getAllCategorys)
 
 router.post("/createCategory", createCategoryValidator, createCategory)
 
