@@ -7,6 +7,7 @@ import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
 import userRoutes from "../src/user/user.routes.js"
+import productRoutes from "../src/product/product.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 
 const middlewares = (app) => {
@@ -35,6 +36,7 @@ const middlewares = (app) => {
 const routes = (app) =>{
     app.use("/superMarket/v1/auth", authRoutes)
     app.use("/superMarket/v1/user", userRoutes)
+    app.use("/superMarket/v1/product", productRoutes)
 }
 
 const conectarDB = async () =>{
