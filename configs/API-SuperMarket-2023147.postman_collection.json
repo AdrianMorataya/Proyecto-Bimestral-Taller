@@ -233,7 +233,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMDUwMTM1NTUwYTEwNjkzZDVlMjIiLCJpYXQiOjE3MzkzOTY5MTksImV4cCI6MTczOTQwMDUxOX0.glvqEjxJFEyWeIiE2od3aInWhyjwFPwTrlYW_FLOGvg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzQxZTQyNGUxYmRlOGU2NjhkMzIiLCJpYXQiOjE3NDA2MDczMjcsImV4cCI6MTc0MDYxMDkyN30.eKXBtblr5izeTqtwmtrVl-T_JyBIhPYOoahhOW8Rt88",
 									"type": "string"
 								}
 							]
@@ -769,7 +769,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzQxZTQyNGUxYmRlOGU2NjhkMzIiLCJpYXQiOjE3NDA2MDAzNTMsImV4cCI6MTc0MDYwMzk1M30.V7EwOmpvc-139NbfujUFID9p58K-8ucQ3en3rbAFWBc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzQxZTQyNGUxYmRlOGU2NjhkMzIiLCJpYXQiOjE3NDA2MDczMjcsImV4cCI6MTc0MDYxMDkyN30.eKXBtblr5izeTqtwmtrVl-T_JyBIhPYOoahhOW8Rt88",
 									"type": "string"
 								}
 							]
@@ -847,6 +847,235 @@
 								"v1",
 								"product",
 								"getProductUnavailable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add Product To Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/addToCart/67ad20c45447df662d703b12/67bf780bc9d3492f5d22c4dd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"cart",
+								"addToCart",
+								"67ad20c45447df662d703b12",
+								"67bf780bc9d3492f5d22c4dd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/getCart/67ad20c45447df662d703b12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"cart",
+								"getCart",
+								"67ad20c45447df662d703b12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product To Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/removeFromCart/67ad20c45447df662d703b12/67bf780bc9d3492f5d22c4dd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"cart",
+								"removeFromCart",
+								"67ad20c45447df662d703b12",
+								"67bf780bc9d3492f5d22c4dd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Quantity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newQuantity\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/updateQuantity/67ad20c45447df662d703b12/67bf780bc9d3492f5d22c4dd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"cart",
+								"updateQuantity",
+								"67ad20c45447df662d703b12",
+								"67bf780bc9d3492f5d22c4dd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bill",
+			"item": [
+				{
+					"name": "Generate Bill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Adrian Morataya\",\r\n    \"nit\": \"52723542\",\r\n    \"date\": \"2025-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/bill/generateBill/67bf901aeb0682f8bb2ea337",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"bill",
+								"generateBill",
+								"67bf901aeb0682f8bb2ea337"
 							]
 						}
 					},

@@ -77,65 +77,65 @@ export const getCart = async (req, res) => {
   
 
 export const removeFromCart = async (req, res) => {
-try {
-    const { productId } = req.params;
-    const userId = req.params.userId;
+    try {
+        const { productId } = req.params;
+        const userId = req.params.userId;
 
-    const cart = await Cart.findOne({ user: userId });
+        const cart = await Cart.findOne({ user: userId });
 
-    if (!cart) {
-    return res.status(404).json({ success: false, message: "Carrito vacío" });
+        if (!cart) {
+        return res.status(404).json({ success: false, message: "Carrito vacío" });
+        }
+
+        cart.products = cart.products.filter(p => p.product.toString() !== productId);
+
+        await cart.save();
+
+        return res.status(200).json({ success: true, message: "Producto eliminado del carrito", cart });
+    } catch (err) {
+        return res.status(500).json({
+        success: false,
+        message: "Error al eliminar producto del carrito",
+        error: err.message
+        });
     }
-
-    cart.products = cart.products.filter(p => p.product.toString() !== productId);
-
-    await cart.save();
-
-    return res.status(200).json({ success: true, message: "Producto eliminado del carrito", cart });
-} catch (err) {
-    return res.status(500).json({
-    success: false,
-    message: "Error al eliminar producto del carrito",
-    error: err.message
-    });
-}
 };
   
 
 export const updateProductQuantity = async (req, res) => {
-try {
-    const { newQuantity } = req.body;
-    const productId = req.params.productId;
-    const userId = req.params.userId;
+    try {
+        const { newQuantity } = req.body;
+        const productId = req.params.productId;
+        const userId = req.params.userId;
 
-    if (newQuantity <= 0) {
-    return res.status(400).json({ success: false, message: "La cantidad debe ser mayor que 0" });
+        if (newQuantity <= 0) {
+        return res.status(400).json({ success: false, message: "La cantidad debe ser mayor que 0" });
+        }
+
+        const cart = await Cart.findOne({ user: userId });
+
+        if (!cart) {
+        return res.status(404).json({ success: false, message: "Carrito vacío" });
+        }
+
+        const productInCart = cart.products.find(p => p.product.toString() === productId);
+
+        if (!productInCart) {
+        return res.status(404).json({ success: false, message: "Producto no encontrado en el carrito" });
+        }
+
+        const product = await Product.findById(productId);
+        productInCart.quantity = newQuantity;
+        productInCart.totalPrice = productInCart.quantity * product.price;
+
+        await cart.save();
+
+        return res.status(200).json({ success: true, message: "Cantidad actualizada", cart });
+    } catch (err) {
+        return res.status(500).json({
+        success: false,
+        message: "Error al actualizar la cantidad",
+        error: err.message
+        });
     }
-
-    const cart = await Cart.findOne({ user: userId });
-
-    if (!cart) {
-    return res.status(404).json({ success: false, message: "Carrito vacío" });
-    }
-
-    const productInCart = cart.products.find(p => p.product.toString() === productId);
-
-    if (!productInCart) {
-    return res.status(404).json({ success: false, message: "Producto no encontrado en el carrito" });
-    }
-
-    const product = await Product.findById(productId);
-    productInCart.quantity = newQuantity;
-    productInCart.totalPrice = productInCart.quantity * product.price;
-
-    await cart.save();
-
-    return res.status(200).json({ success: true, message: "Cantidad actualizada", cart });
-} catch (err) {
-    return res.status(500).json({
-    success: false,
-    message: "Error al actualizar la cantidad",
-    error: err.message
-    });
-}
 };
