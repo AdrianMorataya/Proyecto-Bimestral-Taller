@@ -9,6 +9,7 @@ import authRoutes from "../src/auth/auth.routes.js"
 import userRoutes from "../src/user/user.routes.js"
 import productRoutes from "../src/product/product.routes.js"
 import categoryRoutes from "../src/category/category.routes.js"
+import cartRoutes from "../src/cart/cart.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import { swaggerDocs, swaggerUi } from "./swagger.js"
 
@@ -40,6 +41,7 @@ const routes = (app) =>{
     app.use("/superMarket/v1/user", userRoutes)
     app.use("/superMarket/v1/product", productRoutes)
     app.use("/superMarket/v1/category", categoryRoutes)
+    app.use("/superMarket/v1/cart", cartRoutes)
     app.use("/superMarket/v1/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
