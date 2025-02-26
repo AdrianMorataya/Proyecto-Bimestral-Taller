@@ -15,15 +15,15 @@ const swaggerOptions = {
         },
         servers:[
             {
-                url: "http://127.0.0.1:3000/adopptionSystem/v1"
+                url: "http://127.0.0.1:3000/superMarket/v1"
             }
         ]
     },
     apis:[
         "./src/auth/*.js",
+        "./src/category/*.js",
+        "./src/product/*.js",
         "./src/user/*.js",
-        "./src/pet/*.js",
-        "./src/appointment/*.js",
     ]
 }
 

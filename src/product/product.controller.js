@@ -23,6 +23,8 @@ export const saveProduct = async (req, res) => {
             categorys: categoryId
         });
 
+        newProduct.sold = 0;
+
         await newProduct.save();
 
         if (categoryId !== "67ad0a98a2a5eeaa2dd27999") {
@@ -44,18 +46,40 @@ export const saveProduct = async (req, res) => {
     }
 };
 
-export const getProductsAvailables = async(req, res) => {
+export const getProductsAvailables = async (req, res) => {
     try {
-        const { limits = 10, from = 0 } = req.query;
+        const { limits = 10, from = 0, Filter, nameFilter, categoryFilter } = req.body;
 
         const query = { status: "AVAILABLE" };
+
+        if (nameFilter) {
+            query.name = { $regex: nameFilter, $options: "i" };
+        }
+
+        if (categoryFilter) {
+            const category = await Category.findOne({ name: { $regex: categoryFilter, $options: "i" } });
+
+            if (category) {
+                query.categorys = category._id;
+            } else {
+                console.log("No se encontró la categoría:", categoryFilter);
+            }
+        }
+
+        let sortOption = {};
+        if (Filter === "Ascendente") {
+            sortOption.sold = 1;
+        } else if (Filter === "Descendente") {
+            sortOption.sold = -1;
+        }
 
         const [total, products] = await Promise.all([
             Product.countDocuments(query),
             Product.find(query)
                 .skip(Number(from))
                 .limit(Number(limits))
-                .populate("categorys", "name") 
+                .sort(sortOption)
+                .populate("categorys", "name")
         ]);
 
         return res.status(200).json({
@@ -72,33 +96,55 @@ export const getProductsAvailables = async(req, res) => {
     }
 };
 
+export const getProductsUnavailables = async (req, res) => {
+    try {
+        const { limits = 10, from = 0, Filter, nameFilter, categoryFilter } = req.body;
 
-export const getProductsUnavailables = async(req, res) => {
-    try{
-        const { limits = 3, from = 0} = req.query
-        const query = {status: "UNAVAILABLE"}
+        const query = { status: "UNAVAILABLE" };
 
-        const [ total, products ] = await Promise.all([
+        if (nameFilter) {
+            query.name = { $regex: nameFilter, $options: "i" };
+        }
+
+        if (categoryFilter) {
+            const category = await Category.findOne({ name: { $regex: categoryFilter, $options: "i" } });
+
+            if (category) {
+                query.categorys = category._id;
+            } else {
+                console.log("No se encontró la categoría:", categoryFilter);
+            }
+        }
+
+        let sortOption = {};
+        if (Filter === "Ascendente") {
+            sortOption.sold = 1;
+        } else if (Filter === "Descendente") {
+            sortOption.sold = -1;
+        }
+
+        const [total, products] = await Promise.all([
             Product.countDocuments(query),
             Product.find(query)
                 .skip(Number(from))
                 .limit(Number(limits))
-        ])
+                .sort(sortOption)
+                .populate("categorys", "name")
+        ]);
 
         return res.status(200).json({
             success: true,
             total,
             products
-        })
-
-    }catch(err){
+        });
+    } catch (err) {
         return res.status(500).json({
             success: false,
             message: "Error al listar los productos",
             error: err.message
-        })
+        });
     }
-}
+};
 
 export const getProductById = async(req, res) => {
     try{
@@ -131,7 +177,7 @@ export const deleteProduct = async (req, res) => {
     try{
         const { id } = req. params
 
-        const product =  await Product.findByIdAndUpdate(id, {status: false}, {new: true})
+        const product =  await Product.findByIdAndDelete(id, {status: false}, {new: true})
 
         return res.status(200).json({
             success: true,

@@ -40,7 +40,7 @@ const routes = (app) =>{
     app.use("/superMarket/v1/user", userRoutes)
     app.use("/superMarket/v1/product", productRoutes)
     app.use("/superMarket/v1/category", categoryRoutes)
-    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+    app.use("/superMarket/v1/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const conectarDB = async () =>{

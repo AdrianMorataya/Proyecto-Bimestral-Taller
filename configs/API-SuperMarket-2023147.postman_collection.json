@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "75ebcdb8-f769-40c2-b017-8165ccdf3dcc",
+		"_postman_id": "8e9e6fbf-8ff2-473f-bd6f-0325c3f12a78",
 		"name": "API-SuperMarket-2023147",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38317977"
+		"_exporter_id": "37585425"
 	},
 	"item": [
 		{
@@ -75,6 +75,40 @@
 								"v1",
 								"auth",
 								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"adrian@gmail.com\",\r\n    \"password\": \"Adrian_Morataya147\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"auth",
+								"login"
 							]
 						}
 					},
@@ -396,6 +430,171 @@
 			]
 		},
 		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tecnologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/createCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Categorys",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzUyODMsImV4cCI6MTczOTM3ODg4M30.3Rl2AkAVoA_rWKHmUOP25SNo3QFwRlxfS5vLTsdM-QQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/deleteCategory/67acc24e3b2b07a2e188009b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								"deleteCategory",
+								"67acc24e3b2b07a2e188009b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Refrescos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/category/updateCategory/67ad13cea2a5eeaa2dd279b1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"category",
+								"updateCategory",
+								"67ad13cea2a5eeaa2dd279b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Product",
 			"item": [
 				{
@@ -406,7 +605,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMDUwMTM1NTUwYTEwNjkzZDVlMjIiLCJpYXQiOjE3MzkzOTU2ODYsImV4cCI6MTczOTM5OTI4Nn0.2BtPC-5pE_2LHiTpF_6zKR1--6q3MzJuCL1FrM3slCU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
 									"type": "string"
 								}
 							]
@@ -415,7 +614,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Hamburguesa\",\r\n    \"description\": \"Hamburguesa de mcdonalds\",\r\n    \"price\": \"50\",\r\n    \"amount\": \"1\",\r\n    \"status\": \"AVAILABLE\",\r\n    \"categorys\": \"67ad1ff93fced5489be7f3a3\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Teclado Redragon\",\r\n    \"description\": \"Kumara K552 RGB\",\r\n    \"price\": \"650\",\r\n    \"amount\": \"1\",\r\n    \"status\": \"AVAILABLE\",\r\n    \"categorys\": \"67bf7860c9d3492f5d22c4ef\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -526,10 +725,20 @@
 				{
 					"name": "Delete Product",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/adoptionSystem/v1/pet/deletePet/67aabb982eb4342b0320410d",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/deleteProduct/67bf74ba424e1bde8e668d41",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -539,11 +748,11 @@
 							],
 							"port": "3000",
 							"path": [
-								"adoptionSystem",
+								"superMarket",
 								"v1",
-								"pet",
-								"deletePet",
-								"67aabb982eb4342b0320410d"
+								"product",
+								"deleteProduct",
+								"67bf74ba424e1bde8e668d41"
 							]
 						}
 					},
@@ -551,9 +760,31 @@
 				},
 				{
 					"name": "List Product Available",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzQxZTQyNGUxYmRlOGU2NjhkMzIiLCJpYXQiOjE3NDA2MDAzNTMsImV4cCI6MTc0MDYwMzk1M30.V7EwOmpvc-139NbfujUFID9p58K-8ucQ3en3rbAFWBc",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"Filter\": \"Ascendente\"\r\n    //\"Filter\": \"Descendente\"\r\n    //\"nameFilter\": \"PC GAMER\"\r\n    //\"categoryFilter\": \"Comida\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://127.0.0.1:3000/superMarket/v1/product/getProductAvailable",
 							"protocol": "http",
@@ -576,9 +807,31 @@
 				},
 				{
 					"name": "List Product Unavailable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"Filter\": \"Ascendente\"\r\n    //\"Filter\": \"Descendente\"\r\n    //\"nameFilter\": \"PC GAMER\"\r\n    //\"categoryFilter\": \"Comida\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://127.0.0.1:3000/superMarket/v1/product/getProductUnavailable",
 							"protocol": "http",
@@ -594,161 +847,6 @@
 								"v1",
 								"product",
 								"getProductUnavailable"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Category",
-			"item": [
-				{
-					"name": "Create Category",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMDUwMTM1NTUwYTEwNjkzZDVlMjIiLCJpYXQiOjE3MzkzOTU2ODYsImV4cCI6MTczOTM5OTI4Nn0.2BtPC-5pE_2LHiTpF_6zKR1--6q3MzJuCL1FrM3slCU",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Comida\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/category/createCategory",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3000",
-							"path": [
-								"superMarket",
-								"v1",
-								"category",
-								"createCategory"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List Categorys",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/category/",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3000",
-							"path": [
-								"superMarket",
-								"v1",
-								"category",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Category",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzUyODMsImV4cCI6MTczOTM3ODg4M30.3Rl2AkAVoA_rWKHmUOP25SNo3QFwRlxfS5vLTsdM-QQ",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/category/deleteCategory/67acc24e3b2b07a2e188009b",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3000",
-							"path": [
-								"superMarket",
-								"v1",
-								"category",
-								"deleteCategory",
-								"67acc24e3b2b07a2e188009b"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Category",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Refrescos\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/category/updateCategory/67ad13cea2a5eeaa2dd279b1",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3000",
-							"path": [
-								"superMarket",
-								"v1",
-								"category",
-								"updateCategory",
-								"67ad13cea2a5eeaa2dd279b1"
 							]
 						}
 					},
