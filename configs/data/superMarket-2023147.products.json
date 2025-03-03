@@ -1,0 +1,200 @@
+[{
+  "_id": {
+    "$oid": "67bf780bc9d3492f5d22c4dd"
+  },
+  "name": "Hamburguesa",
+  "description": "Hamburguesa de mcdonalds",
+  "price": 50,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67bf749b424e1bde8e668d3c"
+  },
+  "createdAt": {
+    "$date": "2025-02-26T20:22:35.846Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T20:22:35.846Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf7842c9d3492f5d22c4e6"
+  },
+  "name": "Pizza",
+  "description": "Pizza de dominos",
+  "price": 50,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67bf749b424e1bde8e668d3c"
+  },
+  "createdAt": {
+    "$date": "2025-02-26T20:23:30.510Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T20:23:30.510Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf7855c9d3492f5d22c4eb"
+  },
+  "name": "Coca Cola",
+  "description": "Bebida de cola",
+  "price": 23,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67bf749b424e1bde8e668d3c"
+  },
+  "createdAt": {
+    "$date": "2025-02-26T20:23:49.433Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T20:23:49.433Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf787dc9d3492f5d22c4f3"
+  },
+  "name": "PC GAMER",
+  "description": "Computadora",
+  "price": 6500,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67bf7860c9d3492f5d22c4ef"
+  },
+  "createdAt": {
+    "$date": "2025-02-26T20:24:29.224Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T20:24:29.224Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf788bc9d3492f5d22c4f8"
+  },
+  "name": "Teclado Redragon",
+  "description": "Kumara K552 RGB",
+  "price": 650,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67bf7860c9d3492f5d22c4ef"
+  },
+  "createdAt": {
+    "$date": "2025-02-26T20:24:43.660Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T20:24:43.660Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c61f543b2a713a236971ab"
+  },
+  "name": "Monitor AOC",
+  "description": "Monitor",
+  "price": 500,
+  "amount": 10,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67bf7860c9d3492f5d22c4ef"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T21:29:56.944Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T21:29:56.944Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c61fca3b2a713a236971b3"
+  },
+  "name": "Adidas Bad Bunny Response CL",
+  "description": "Zapatos Adidas",
+  "price": 2000,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67c616833b2a713a23697198"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T21:31:54.311Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T21:31:54.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c61fdb3b2a713a236971b8"
+  },
+  "name": "Nike Travis Scott",
+  "description": "Zapatos Nike",
+  "price": 5000,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67c616833b2a713a23697198"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T21:32:11.611Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T21:32:11.611Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c61ffe3b2a713a236971bd"
+  },
+  "name": "Plato hondo de comida",
+  "description": "Plato",
+  "price": 25,
+  "amount": 1,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67c61ec83b2a713a236971a7"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T21:32:46.298Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T21:32:46.298Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c620103b2a713a236971c2"
+  },
+  "name": "Picador de vansilvana",
+  "description": "Picador de comida",
+  "price": 250,
+  "amount": 15,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67c61ec83b2a713a236971a7"
+  },
+  "createdAt": {
+    "$date": "2025-03-03T21:33:04.958Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-03T21:33:04.958Z"
+  }
+}]

@@ -1,5 +1,4 @@
 import Cart from "../cart/cart.model.js";
-import Product from "../product/product.model.js";
 import Invoice from "../bill/bill.model.js";
 import XLSX from "xlsx";
 import fs from "fs";
@@ -91,6 +90,28 @@ export const createBillFromCart = async (req, res) => {
     return res.status(500).json({
       success: false,
       message: "Error al generar la factura",
+      error: err.message
+    });
+  }
+};
+
+export const listBills = async (req, res) => {
+  try {
+    const invoices = await Invoice.find().populate("cart").populate("products.product");
+
+    if (!invoices || invoices.length === 0) {
+      return res.status(404).json({ success: false, message: "No se encontraron facturas." });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Facturas obtenidas con éxito.",
+      invoices
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      message: "Error al obtener las facturas.",
       error: err.message
     });
   }

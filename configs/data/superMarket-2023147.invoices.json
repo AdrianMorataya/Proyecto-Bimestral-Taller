@@ -1,0 +1,290 @@
+[{
+  "_id": {
+    "$oid": "67c6226f3b2a713a23697203"
+  },
+  "name": "Harol Rodriguez",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621c23b2a713a236971dd"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c61ffe3b2a713a236971bd"
+      },
+      "quantity": 10,
+      "totalPrice": 250,
+      "_id": {
+        "$oid": "67c6226f3b2a713a23697204"
+      }
+    }
+  ],
+  "totalAmount": 250,
+  "createdAt": {
+    "$date": "2025-03-03T21:43:11.071Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6232a3b2a713a23697212"
+  },
+  "name": "Adrian Morataya",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67bf901aeb0682f8bb2ea337"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67bf780bc9d3492f5d22c4dd"
+      },
+      "quantity": 2,
+      "totalPrice": 100,
+      "_id": {
+        "$oid": "67c6232a3b2a713a23697213"
+      }
+    }
+  ],
+  "totalAmount": 100,
+  "createdAt": {
+    "$date": "2025-03-03T21:46:18.113Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6233e3b2a713a2369721b"
+  },
+  "name": "David Morente",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c6212a3b2a713a236971ce"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c61fca3b2a713a236971b3"
+      },
+      "quantity": 1,
+      "totalPrice": 2000,
+      "_id": {
+        "$oid": "67c6233e3b2a713a2369721c"
+      }
+    }
+  ],
+  "totalAmount": 2000,
+  "createdAt": {
+    "$date": "2025-03-03T21:46:38.471Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c623543b2a713a23697224"
+  },
+  "name": "Alexis Monroy",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621593b2a713a236971d3"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c61f543b2a713a236971ab"
+      },
+      "quantity": 10,
+      "totalPrice": 5000,
+      "_id": {
+        "$oid": "67c623543b2a713a23697225"
+      }
+    }
+  ],
+  "totalAmount": 5000,
+  "createdAt": {
+    "$date": "2025-03-03T21:47:00.295Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6236a3b2a713a2369722d"
+  },
+  "name": "Mario Rodriguez",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621973b2a713a236971d8"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67bf788bc9d3492f5d22c4f8"
+      },
+      "quantity": 10,
+      "totalPrice": 6500,
+      "_id": {
+        "$oid": "67c6236a3b2a713a2369722e"
+      }
+    }
+  ],
+  "totalAmount": 6500,
+  "createdAt": {
+    "$date": "2025-03-03T21:47:22.762Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c624663b2a713a23697236"
+  },
+  "name": "Braulio Echeverria",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621d53b2a713a236971e2"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c61ffe3b2a713a236971bd"
+      },
+      "quantity": 10,
+      "totalPrice": 250,
+      "_id": {
+        "$oid": "67c624663b2a713a23697237"
+      }
+    }
+  ],
+  "totalAmount": 250,
+  "createdAt": {
+    "$date": "2025-03-03T21:51:34.502Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6247a3b2a713a2369723f"
+  },
+  "name": "Saul Donis",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621e23b2a713a236971e7"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c620103b2a713a236971c2"
+      },
+      "quantity": 10,
+      "totalPrice": 2500,
+      "_id": {
+        "$oid": "67c6247a3b2a713a23697240"
+      }
+    }
+  ],
+  "totalAmount": 2500,
+  "createdAt": {
+    "$date": "2025-03-03T21:51:54.178Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c6248e3b2a713a23697248"
+  },
+  "name": "Abner del Cid",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621e83b2a713a236971ec"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c620103b2a713a236971c2"
+      },
+      "quantity": 10,
+      "totalPrice": 2500,
+      "_id": {
+        "$oid": "67c6248e3b2a713a23697249"
+      }
+    }
+  ],
+  "totalAmount": 2500,
+  "createdAt": {
+    "$date": "2025-03-03T21:52:14.946Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c624a63b2a713a23697251"
+  },
+  "name": "Ian Soto",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c621ef3b2a713a236971f1"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c620103b2a713a236971c2"
+      },
+      "quantity": 10,
+      "totalPrice": 2500,
+      "_id": {
+        "$oid": "67c624a63b2a713a23697252"
+      }
+    }
+  ],
+  "totalAmount": 2500,
+  "createdAt": {
+    "$date": "2025-03-03T21:52:38.178Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c624ba3b2a713a2369725a"
+  },
+  "name": "Randy Oscal",
+  "nit": "52723542",
+  "date": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "cart": {
+    "$oid": "67c622053b2a713a236971f6"
+  },
+  "products": [
+    {
+      "product": {
+        "$oid": "67c61fdb3b2a713a236971b8"
+      },
+      "quantity": 10,
+      "totalPrice": 50000,
+      "_id": {
+        "$oid": "67c624ba3b2a713a2369725b"
+      }
+    }
+  ],
+  "totalAmount": 50000,
+  "createdAt": {
+    "$date": "2025-03-03T21:52:58.140Z"
+  }
+}]

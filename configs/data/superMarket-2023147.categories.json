@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "67ad20c45447df662d703b10"
+  },
+  "name": "Sin Categoría",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67bf749b424e1bde8e668d3c"
+  },
+  "name": "Comida",
+  "products": [
+    {
+      "$oid": "67bf74ba424e1bde8e668d41"
+    },
+    {
+      "$oid": "67bf780bc9d3492f5d22c4dd"
+    },
+    {
+      "$oid": "67bf7842c9d3492f5d22c4e6"
+    },
+    {
+      "$oid": "67bf7855c9d3492f5d22c4eb"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67bf7860c9d3492f5d22c4ef"
+  },
+  "name": "Tecnologia",
+  "products": [
+    {
+      "$oid": "67bf787dc9d3492f5d22c4f3"
+    },
+    {
+      "$oid": "67bf788bc9d3492f5d22c4f8"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6167f3b2a713a23697195"
+  },
+  "name": "Ropa",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67c616833b2a713a23697198"
+  },
+  "name": "Zapatos",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67c6168a3b2a713a2369719b"
+  },
+  "name": "Figuras",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67c616903b2a713a2369719e"
+  },
+  "name": "Coleccionables",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67c61eb23b2a713a236971a1"
+  },
+  "name": "Carpinteria",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67c61ec43b2a713a236971a4"
+  },
+  "name": "Cubiertos",
+  "products": []
+},
+{
+  "_id": {
+    "$oid": "67c61ec83b2a713a236971a7"
+  },
+  "name": "Cocina",
+  "products": []
+}]

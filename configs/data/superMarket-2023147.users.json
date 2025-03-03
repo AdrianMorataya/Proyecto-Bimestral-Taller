@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "67ad20c45447df662d703b12"
+  },
+  "name": "Adrian",
+  "surname": "Morataya",
+  "username": "adriann_m",
+  "email": "adrian@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ClGXaflk6zoov9bery1Jwg$FuZFZaTQaqBiDdQSezkOprciDwsismP1u7Do7JmybwE",
+  "phone": "37405445",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67bf741e424e1bde8e668d32"
+  },
+  "name": "David",
+  "surname": "Morente",
+  "username": "dmorente",
+  "email": "david@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$8+d2d3Mb0TfRMGUT6mQAlw$HGPnt7wCfo5gW/dsaWYamq77oT9kWuCoZaDHv29qL3o",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c614573b2a713a23697172"
+  },
+  "name": "Alexis",
+  "surname": "Monroy",
+  "username": "amonroy",
+  "email": "alexis@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$mlU+7nVGG220vg6/IPdwnw$S6ZKgh7iZNO50PV/GmVvK9ZJM4Bv+jgV/o9fobTFzok",
+  "profilePicture": "SuperMarket-1741034583065.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c614753b2a713a23697176"
+  },
+  "name": "Mario",
+  "surname": "Rodriguez",
+  "username": "mrodriguez",
+  "email": "mario@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$2Wz4Pe71Wp1JdYg8yqL93g$G76Azb9XPoZinq+PLH2Zq3ujBX4y9dpINVv8Fx8Gysc",
+  "profilePicture": "SuperMarket-1741034613048.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c614963b2a713a2369717a"
+  },
+  "name": "Harol",
+  "surname": "Rodriguez",
+  "username": "hrodriguez",
+  "email": "harol@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$EAs9bYKNTpro/3aD/NvRcQ$yzdJMMeKYkt3Tw7QrsKNsUenZFeMq9QTsvnx2iMU7Do",
+  "profilePicture": "SuperMarket-1741034646221.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c614ab3b2a713a2369717e"
+  },
+  "name": "Randy",
+  "surname": "Oscal",
+  "username": "roscal",
+  "email": "randy@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$UaMFBWh5/E8lGCPfsvNywQ$qRTZk1ev3OEsd/H5uzNLhjRbMooijYqOjPqcuPqUbrA",
+  "profilePicture": "SuperMarket-1741034666869.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c615433b2a713a23697182"
+  },
+  "name": "Ian",
+  "surname": "Soto",
+  "username": "isoto",
+  "email": "ian@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$vxeyWHJUGpHPiDOvzQQt+A$5Cd2CvxG0UxRNVcOMX4LRZO6y87tqRNxFUSMvfSYYaE",
+  "profilePicture": "SuperMarket-1741034819030.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c615bd3b2a713a23697186"
+  },
+  "name": "Abner",
+  "surname": "Cid",
+  "username": "acid",
+  "email": "abner@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$o8NPq2qA+1mBiQ7C6U2Weg$MS+QVgVqaYRqEt+uXFrS23waOuF9AsAnoOIzMTh+qMU",
+  "profilePicture": "SuperMarket-1741034941471.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c615e83b2a713a2369718a"
+  },
+  "name": "Saul",
+  "surname": "Donis",
+  "username": "sdonis",
+  "email": "saul@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$CnYd+QSOCE2H5NEzsx3U2g$17si2e4ZAkH+35DdlP46Npiui3ipwOQGkPxnS2IbDOQ",
+  "profilePicture": "SuperMarket-1741034983949.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c616073b2a713a2369718e"
+  },
+  "name": "Braulio",
+  "surname": "Echeverria",
+  "username": "becheverria",
+  "email": "braulio@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$33kEqHeTnTOd0Cz7I5miGA$VhJ4Kmow2sKEYYTbpYaWDDqHXJ79NaX4QpC1q6BlRhk",
+  "profilePicture": "SuperMarket-1741035015499.jpg",
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": true
+}]
