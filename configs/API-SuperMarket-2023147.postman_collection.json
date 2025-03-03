@@ -19,22 +19,22 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "David",
+									"value": "Braulio",
 									"type": "text"
 								},
 								{
 									"key": "surname",
-									"value": "Morente",
+									"value": "Echeverria",
 									"type": "text"
 								},
 								{
 									"key": "username",
-									"value": "dmorente",
+									"value": "becheverria",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "david@gmail.com",
+									"value": "braulio@gmail.com",
 									"type": "text"
 								},
 								{
@@ -44,19 +44,13 @@
 								},
 								{
 									"key": "password",
-									"value": "David_Morente242",
+									"value": "Braulio_Echeverria000",
 									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "ADMIN_ROLE",
-									"type": "text",
-									"disabled": true
 								},
 								{
 									"key": "profilePicture",
 									"type": "file",
-									"src": "/C:/Users/Informatica/Documents/!Proyecto Bimestral/Proyecto-Bimestral-Taller/public/uploads/profile-pictures/CrockerMoreno-1738337728868.png"
+									"src": "/C:/Users/Informatica/Documents/!Proyecto Bimestral/Proyecto-Bimestral-Taller/public/uploads/profile-pictures/SuperMarket.jpg"
 								}
 							]
 						},
@@ -197,7 +191,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMTc5OTcxNjJlNzI2ZDA2ZGVjMWMiLCJpYXQiOjE3MzkzOTgyNTksImV4cCI6MTczOTQwMTg1OX0.zOkBcCnH_qC-Mp7Cfx_AaRmhA_oneOZdUUW7Z2yAYHc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzkzODIsImV4cCI6MTc0MTA0Mjk4Mn0.3k_UE6otWxhTPloxY7g8PSdDY9YkQ_ugorhoaQ5Jj04",
 									"type": "string"
 								}
 							]
@@ -205,7 +199,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/user/deleteUser/67ad050135550a10693d5e22",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/deleteUser/67c614963b2a713a2369717a",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -219,7 +213,7 @@
 								"v1",
 								"user",
 								"deleteUser",
-								"67ad050135550a10693d5e22"
+								"67c614963b2a713a2369717a"
 							]
 						}
 					},
@@ -233,7 +227,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzQxZTQyNGUxYmRlOGU2NjhkMzIiLCJpYXQiOjE3NDA2MDczMjcsImV4cCI6MTc0MDYxMDkyN30.eKXBtblr5izeTqtwmtrVl-T_JyBIhPYOoahhOW8Rt88",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzkzODIsImV4cCI6MTc0MTA0Mjk4Mn0.3k_UE6otWxhTPloxY7g8PSdDY9YkQ_ugorhoaQ5Jj04",
 									"type": "string"
 								}
 							]
@@ -440,7 +434,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
 									"type": "string"
 								}
 							]
@@ -449,7 +443,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Tecnologia\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Cocina\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -484,7 +478,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
 									"type": "string"
 								}
 							]
@@ -605,7 +599,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
 									"type": "string"
 								}
 							]
@@ -614,7 +608,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Teclado Redragon\",\r\n    \"description\": \"Kumara K552 RGB\",\r\n    \"price\": \"650\",\r\n    \"amount\": \"1\",\r\n    \"status\": \"AVAILABLE\",\r\n    \"categorys\": \"67bf7860c9d3492f5d22c4ef\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Picador de vansilvana\",\r\n    \"description\": \"Picador de comida\",\r\n    \"price\": \"250\",\r\n    \"amount\": \"15\",\r\n    \"status\": \"AVAILABLE\",\r\n    \"categorys\": \"67c61ec83b2a713a236971a7\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -769,7 +763,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzQxZTQyNGUxYmRlOGU2NjhkMzIiLCJpYXQiOjE3NDA2MDczMjcsImV4cCI6MTc0MDYxMDkyN30.eKXBtblr5izeTqtwmtrVl-T_JyBIhPYOoahhOW8Rt88",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
 									"type": "string"
 								}
 							]
@@ -874,7 +868,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": \"1\"\r\n}",
+							"raw": "{\r\n    \"quantity\": \"10\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -882,7 +876,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/addToCart/67ad20c45447df662d703b12/67bf780bc9d3492f5d22c4dd",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/addToCart/67c614ab3b2a713a2369717e/67c61fdb3b2a713a236971b8",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -896,8 +890,8 @@
 								"v1",
 								"cart",
 								"addToCart",
-								"67ad20c45447df662d703b12",
-								"67bf780bc9d3492f5d22c4dd"
+								"67c614ab3b2a713a2369717e",
+								"67c61fdb3b2a713a236971b8"
 							]
 						}
 					},
@@ -919,7 +913,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/getCart/67ad20c45447df662d703b12",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/getCart/67c614ab3b2a713a2369717e",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -933,7 +927,7 @@
 								"v1",
 								"cart",
 								"getCart",
-								"67ad20c45447df662d703b12"
+								"67c614ab3b2a713a2369717e"
 							]
 						}
 					},
@@ -1044,6 +1038,51 @@
 							"bearer": [
 								{
 									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Randy Oscal\",\r\n    \"nit\": \"52723542\",\r\n    \"date\": \"2025-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/superMarket/v1/bill/generateBill/67c622053b2a713a236971f6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"superMarket",
+								"v1",
+								"bill",
+								"generateBill",
+								"67c622053b2a713a236971f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Bill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
 									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
 									"type": "string"
 								}
@@ -1061,7 +1100,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/bill/generateBill/67bf901aeb0682f8bb2ea337",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/bill/listBill",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -1074,8 +1113,7 @@
 								"superMarket",
 								"v1",
 								"bill",
-								"generateBill",
-								"67bf901aeb0682f8bb2ea337"
+								"listBill"
 							]
 						}
 					},
