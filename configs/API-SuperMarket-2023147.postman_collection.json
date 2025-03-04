@@ -19,22 +19,22 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Braulio",
+									"value": "Jose",
 									"type": "text"
 								},
 								{
 									"key": "surname",
-									"value": "Echeverria",
+									"value": "Morente",
 									"type": "text"
 								},
 								{
 									"key": "username",
-									"value": "becheverria",
+									"value": "jmorente",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "braulio@gmail.com",
+									"value": "jose@gmail.com",
 									"type": "text"
 								},
 								{
@@ -44,7 +44,7 @@
 								},
 								{
 									"key": "password",
-									"value": "Braulio_Echeverria000",
+									"value": "Jose_Morente0000",
 									"type": "text"
 								},
 								{
@@ -155,7 +155,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjZmQwMThhNTdkZWQ0YTRiNjJiNDciLCJpYXQiOjE3MzkzOTA1ODMsImV4cCI6MTczOTM5NDE4M30.tXjmb0WPWnn983WOl7Q9XT_bedc3ZrPqlv2l0CTkYoA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
@@ -163,7 +163,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/user/findUser/67acfd018a57ded4a4b62b47",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/findUser/67c615433b2a713a23697182",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -177,7 +177,7 @@
 								"v1",
 								"user",
 								"findUser",
-								"67acfd018a57ded4a4b62b47"
+								"67c615433b2a713a23697182"
 							]
 						}
 					},
@@ -191,7 +191,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzkzODIsImV4cCI6MTc0MTA0Mjk4Mn0.3k_UE6otWxhTPloxY7g8PSdDY9YkQ_ugorhoaQ5Jj04",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
@@ -199,7 +199,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/user/deleteUser/67c614963b2a713a2369717a",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/user/deleteUser/67c773ef63e3dce77dd02f28",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -213,7 +213,7 @@
 								"v1",
 								"user",
 								"deleteUser",
-								"67c614963b2a713a2369717a"
+								"67c773ef63e3dce77dd02f28"
 							]
 						}
 					},
@@ -227,7 +227,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzkzODIsImV4cCI6MTc0MTA0Mjk4Mn0.3k_UE6otWxhTPloxY7g8PSdDY9YkQ_ugorhoaQ5Jj04",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
@@ -396,7 +396,7 @@
 								{
 									"key": "profilePicture",
 									"type": "file",
-									"src": "/C:/Users/Informatica/Documents/!Proyecto Bimestral/Proyecto-Bimestral-Taller/public/uploads/profile-pictures/deadpool-and-wolverine-trailer-san-valentin-1738338099251.jpg"
+									"src": "/C:/Users/Informatica/Documents/!Proyecto Bimestral/Proyecto-Bimestral-Taller/public/uploads/profile-pictures/RubiusSuperMarket.jpg"
 								}
 							]
 						},
@@ -434,7 +434,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
@@ -443,7 +443,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Cocina\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Electrodomesticos\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -478,7 +478,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
@@ -599,7 +599,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
@@ -608,7 +608,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Picador de vansilvana\",\r\n    \"description\": \"Picador de comida\",\r\n    \"price\": \"250\",\r\n    \"amount\": \"15\",\r\n    \"status\": \"AVAILABLE\",\r\n    \"categorys\": \"67c61ec83b2a713a236971a7\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Audifonos\",\r\n    \"description\": \"Para la musica\",\r\n    \"price\": \"500\",\r\n    \"amount\": \"250\",\r\n    \"status\": \"AVAILABLE\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -763,7 +763,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
 									"type": "string"
 								}
 							]
