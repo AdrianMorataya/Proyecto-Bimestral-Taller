@@ -24,6 +24,8 @@ const swaggerOptions = {
         "./src/category/*.js",
         "./src/product/*.js",
         "./src/user/*.js",
+        "./src/cart/*.js",
+        "./src/bill/*.js"
     ]
 }
 

@@ -6,16 +6,8 @@ import { uploadProfilePicture } from "../middlewares/multer-uploads.js"
 const router = Router()
 
 router.post(
-    "/register",
-    uploadProfilePicture.single("profilePicture"), 
-    registerValidator, 
-    register
-)
+    "/register", uploadProfilePicture.single("profilePicture"), registerValidator, register)
 
-router.post(
-    "/login",
-    loginValidator,
-    login
-)
+router.post("/login", loginValidator, login)
 
 export default router

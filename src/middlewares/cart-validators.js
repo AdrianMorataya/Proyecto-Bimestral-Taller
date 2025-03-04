@@ -1,39 +1,37 @@
 import { body, param } from "express-validator";
-import { categoryExists } from "../helpers/db-validators.js";
+import { cartExists } from "../helpers/db-validators.js";
 import { validarCampos } from "./validate-fields.js";
 import { handleErrors } from "./handle-errors.js";
 import { validateJWT } from "./validate-jwt.js";
 import { hasRoles } from "./validate-roles.js";
 
-export const createCategoryValidator = [
+export const createCartValidator = [
     validateJWT,
     hasRoles("ADMIN_ROLE"),
-    body("name").notEmpty().withMessage("El nombre es requerido"),
     validarCampos,
     handleErrors
 ];
 
-export const getCategoryValidator = [
+export const getCartValidator = [
     validateJWT,
     validarCampos,
     handleErrors
 ]
 
-export const updateCategoryValidator = [
+export const updateCartValidator = [
     validateJWT,
     hasRoles("ADMIN_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    param("id").custom(categoryExists),
-    body("name").optional().notEmpty().withMessage("El nombre es requerido"),
+    param("id").custom(cartExists),
     validarCampos,
     handleErrors
 ];
 
-export const deleteCategoryValidator = [
+export const deleteCartValidator = [
     validateJWT,
     hasRoles("ADMIN_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    param("id").custom(categoryExists),
+    param("id").custom(cartExists),
     validarCampos,
     handleErrors
 ];

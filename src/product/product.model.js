@@ -28,8 +28,7 @@ const productSchema = new Schema({
     },
     categorys: {
         type: Schema.Types.ObjectId,
-        ref: "Category",
-        default: "67ad0a98a2a5eeaa2dd27999"
+        ref: "Category"
     }
 }, 
 {

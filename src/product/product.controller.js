@@ -5,32 +5,31 @@ import Category from '../category/category.model.js';
 
 export const saveProduct = async (req, res) => {
     try {
-        const { name, description, price, amount, status, categorys } = req.body;
+        let { name, description, price, amount, status, categorys } = req.body;
 
-        const categoryId = categorys || "67ad0a98a2a5eeaa2dd27999";
+        const categoryExists = await Category.findById(categorys)
 
-        const category = await Category.findById(categoryId);
-        if (!category) {
-            return res.status(404).json({ message: "Categoría no encontrada" });
+        if(!categorys){
+            const defaultCategory = await Category.findOne({ name: "Sin Categoría" })
+            categorys = defaultCategory._id
+        }else if(!categoryExists){
+            return res.status(404).json({
+                success: false,
+                message: "Categoria no encontrada"
+            })
         }
 
-        const newProduct = new Product({
+        const newProduct = await Product.create({
             name,
             description,
             price,
             amount,
             status,
-            categorys: categoryId
+            categorys
         });
 
         newProduct.sold = 0;
-
-        await newProduct.save();
-
-        if (categoryId !== "67ad0a98a2a5eeaa2dd27999") {
-            category.products.push(newProduct._id);
-            await category.save();
-        }
+        await Category.findByIdAndUpdate(categorys, { $push: { products: newProduct._id } });
 
         res.status(200).json({
             success: true,
