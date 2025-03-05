@@ -115,7 +115,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"david@gmail.com\",\r\n    \"password\": \"David_Morente242\"\r\n}",
+							"raw": "{\r\n    \"email\": \"randy@gmail.com\",\r\n    \"password\": \"Randy_Oscal279\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -227,7 +227,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDEyMDc5NzIsImV4cCI6MTc0MTIxMTU3Mn0.ewlKI5KeNTis1pK92WYEh4F66YA_rUpdmrW-sqZbuAQ",
 									"type": "string"
 								}
 							]
@@ -643,7 +643,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMDUwMTM1NTUwYTEwNjkzZDVlMjIiLCJpYXQiOjE3MzkzOTU2ODYsImV4cCI6MTczOTM5OTI4Nn0.2BtPC-5pE_2LHiTpF_6zKR1--6q3MzJuCL1FrM3slCU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDEyMDc5NzIsImV4cCI6MTc0MTIxMTU3Mn0.ewlKI5KeNTis1pK92WYEh4F66YA_rUpdmrW-sqZbuAQ",
 									"type": "string"
 								}
 							]
@@ -652,7 +652,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categorys\": \"67ad1ff93fced5489be7f3a3\"\r\n}",
+							"raw": "{\r\n    \"amount\": \"20\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -660,7 +660,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/product/updateProduct/67ad200a3fced5489be7f3a7",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/product/updateProduct/67c61fdb3b2a713a236971b8",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -674,7 +674,7 @@
 								"v1",
 								"product",
 								"updateProduct",
-								"67ad200a3fced5489be7f3a7"
+								"67c61fdb3b2a713a236971b8"
 							]
 						}
 					},
@@ -763,7 +763,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDExMjQ2MDAsImV4cCI6MTc0MTEyODIwMH0._65O3lwfJesycdlPrFzBEaqk4Mx99oAsGuCj0huYCy8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MTRhYjNiMmE3MTNhMjM2OTcxN2UiLCJpYXQiOjE3NDEyMDk2OTAsImV4cCI6MTc0MTIxMzI5MH0.vpYjAtV24w1DmroHWrOyrKWp4NL0SKWTYWYijG3nrzs",
 									"type": "string"
 								}
 							]
@@ -810,7 +810,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MTRhYjNiMmE3MTNhMjM2OTcxN2UiLCJpYXQiOjE3NDEyMDk2OTAsImV4cCI6MTc0MTIxMzI5MH0.vpYjAtV24w1DmroHWrOyrKWp4NL0SKWTYWYijG3nrzs",
 									"type": "string"
 								}
 							]
@@ -905,7 +905,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2Mjg5NjYxZjA1MTJiMDRlMTJmNGUiLCJpYXQiOjE3NDEyMDc5NzIsImV4cCI6MTc0MTIxMTU3Mn0.ewlKI5KeNTis1pK92WYEh4F66YA_rUpdmrW-sqZbuAQ",
 									"type": "string"
 								}
 							]
@@ -987,7 +987,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDA2MDA0MTQsImV4cCI6MTc0MDYwNDAxNH0.MtIFJGvIZIWChh3JEyasCAgp043h_lg1JziiFyF0LFU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MTRhYjNiMmE3MTNhMjM2OTcxN2UiLCJpYXQiOjE3NDEyMDk2OTAsImV4cCI6MTc0MTIxMzI5MH0.vpYjAtV24w1DmroHWrOyrKWp4NL0SKWTYWYijG3nrzs",
 									"type": "string"
 								}
 							]
@@ -996,7 +996,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"newQuantity\": \"2\"\r\n}",
+							"raw": "{\r\n    \"newQuantity\": \"12\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1004,7 +1004,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/updateQuantity/67ad20c45447df662d703b12/67bf780bc9d3492f5d22c4dd",
+							"raw": "http://127.0.0.1:3000/superMarket/v1/cart/updateQuantity/67c61fdb3b2a713a236971b8",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -1018,8 +1018,7 @@
 								"v1",
 								"cart",
 								"updateQuantity",
-								"67ad20c45447df662d703b12",
-								"67bf780bc9d3492f5d22c4dd"
+								"67c61fdb3b2a713a236971b8"
 							]
 						}
 					},
@@ -1038,7 +1037,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FkMjBjNDU0NDdkZjY2MmQ3MDNiMTIiLCJpYXQiOjE3NDEwMzUwOTAsImV4cCI6MTc0MTAzODY5MH0.tpMH-trQ_BHrd2oBNLFbhjsXYV7peBojPhgy0y-jtEI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2MTRhYjNiMmE3MTNhMjM2OTcxN2UiLCJpYXQiOjE3NDEyMDk2OTAsImV4cCI6MTc0MTIxMzI5MH0.vpYjAtV24w1DmroHWrOyrKWp4NL0SKWTYWYijG3nrzs",
 									"type": "string"
 								}
 							]
@@ -1047,7 +1046,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Randy Oscal\",\r\n    \"nit\": \"52723542\",\r\n    \"date\": \"2025-01-01\"\r\n}",
+							"raw": "{\r\n    \"nit\": \"52723542\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

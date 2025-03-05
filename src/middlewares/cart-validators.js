@@ -7,7 +7,7 @@ import { hasRoles } from "./validate-roles.js";
 
 export const createCartValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("USER_ROLE"),
     validarCampos,
     handleErrors
 ];
@@ -20,18 +20,14 @@ export const getCartValidator = [
 
 export const updateCartValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
-    param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    param("id").custom(cartExists),
+    hasRoles("USER_ROLE"),
     validarCampos,
     handleErrors
 ];
 
 export const deleteCartValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
-    param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    param("id").custom(cartExists),
+    hasRoles("USER_ROLE"),
     validarCampos,
     handleErrors
 ];

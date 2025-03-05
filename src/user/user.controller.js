@@ -80,10 +80,10 @@ export const deleteUser = async (req, res) => {
   
 export const updatePassword = async (req, res) => {
     try{
-        const { uid } = req.params
+        const usuario = req.usuario
         const { newPassword } = req.body
 
-        const user = await User.findById(uid)
+        const user = await User.findById(usuario)
 
         const matchOldAndNewPassword = await verify(user.password, newPassword)
 
@@ -96,7 +96,7 @@ export const updatePassword = async (req, res) => {
 
         const encryptedPassword = await hash(newPassword)
 
-        await User.findByIdAndUpdate(uid, {password: encryptedPassword}, {new: true})
+        await User.findByIdAndUpdate(usuario._id, {password: encryptedPassword}, {new: true})
 
         return res.status(200).json({
             success: true,
@@ -115,7 +115,7 @@ export const updatePassword = async (req, res) => {
 export const updateUser = [
     uploadProfilePicture.single('profilePicture'),
     async (req, res) => {
-        const { uid } = req.params;
+        const usuario = req.usuario;
         const { name, surname, username, email, phone, password } = req.body;
 
         let updateData = {};
@@ -135,7 +135,7 @@ export const updateUser = [
         }
 
         try {
-            const updatedUser = await User.findByIdAndUpdate(uid, updateData, { new: true });
+            const updatedUser = await User.findByIdAndUpdate(usuario._id, updateData, { new: true });
 
             if (!updatedUser) {
                 return res.status(404).json({ message: "Usuario no encontrado" });
@@ -156,7 +156,7 @@ export const updateUser = [
 
 export const updateProfilePicture = async (req, res) => {
     try{
-        const { uid } = req.params
+        const usuario = req.usuario
         let newProfilePicture = req.file ? req.file.filename : null
 
         if(!newProfilePicture){
@@ -166,7 +166,7 @@ export const updateProfilePicture = async (req, res) => {
             })
         }
 
-        const user = await User.findById(uid)
+        const user = await User.findById(usuario._id)
 
         if(user.profilePicture){
             const oldProfilePicture = join(__dirname, "../../public/uploads/profile-pictures", user.profilePicture)

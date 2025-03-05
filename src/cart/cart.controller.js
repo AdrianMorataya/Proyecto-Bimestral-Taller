@@ -106,13 +106,13 @@ export const updateProductQuantity = async (req, res) => {
     try {
         const { newQuantity } = req.body;
         const productId = req.params.productId;
-        const userId = req.params.userId;
+        const usuario = req.usuario;
 
         if (newQuantity <= 0) {
         return res.status(400).json({ success: false, message: "La cantidad debe ser mayor que 0" });
         }
 
-        const cart = await Cart.findOne({ user: userId });
+        const cart = await Cart.findOne({ user: usuario._id });
 
         if (!cart) {
         return res.status(404).json({ success: false, message: "Carrito vacío" });

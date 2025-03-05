@@ -1,18 +1,5 @@
 [{
   "_id": {
-    "$oid": "67ad20c45447df662d703b12"
-  },
-  "name": "Adrian",
-  "surname": "Morataya",
-  "username": "adriann_m",
-  "email": "adrian@gmail.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$ClGXaflk6zoov9bery1Jwg$FuZFZaTQaqBiDdQSezkOprciDwsismP1u7Do7JmybwE",
-  "phone": "37405445",
-  "role": "ADMIN_ROLE",
-  "status": true
-},
-{
-  "_id": {
     "$oid": "67bf741e424e1bde8e668d32"
   },
   "name": "David",
@@ -136,4 +123,31 @@
   "phone": "12345678",
   "role": "USER_ROLE",
   "status": true
+},
+{
+  "_id": {
+    "$oid": "67c6289661f0512b04e12f4e"
+  },
+  "name": "Adrian",
+  "surname": "Morataya",
+  "username": "adriann_m",
+  "email": "adrian@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$HTE4lLXlbZqvrxHLlvukcg$+9goB23ppEidT7n5Zf/R24GRSPcD0Evst/w7WdQA6dQ",
+  "phone": "37405445",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c773ef63e3dce77dd02f28"
+  },
+  "name": "Jose",
+  "surname": "Morente",
+  "username": "jmorente",
+  "email": "jose@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$CjFp+nLQIpR7NER6WLYRFA$epcJSssWB+CNDU1XoJvx12dY12CM6ZsTK/ZQ661/t8E",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "status": false
 }]

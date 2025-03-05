@@ -1,6 +1,7 @@
 import Cart from "../cart/cart.model.js";
 import Invoice from "../bill/bill.model.js";
-import XLSX from "xlsx";
+import Product from "../product/product.model.js";
+import PDFDocument from "pdfkit";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -11,15 +12,15 @@ const __dirname = path.dirname(__filename);
 export const createBillFromCart = async (req, res) => {
   try {
     const { cartId } = req.params;
-    const { name, nit, date } = req.body;
+    const { nit } = req.body;
 
     if (!nit || nit.length < 5) {
       return res.status(400).json({ success: false, message: "NIT inválido." });
     }
 
-    if (!date || isNaN(new Date(date))) {
-      return res.status(400).json({ success: false, message: "Fecha inválida." });
-    }
+    const name = req.usuario && req.usuario.name ? req.usuario.name : "Nombre no disponible";
+    
+    const date = new Date();
 
     const cart = await Cart.findById(cartId).populate("products.product");
 
@@ -30,21 +31,40 @@ export const createBillFromCart = async (req, res) => {
     let totalAmount = 0;
     const products = [];
 
-    cart.products.forEach(item => {
+    for (const item of cart.products) {
       const product = item.product;
+
+      if (product.amount < item.quantity) {
+        return res.status(400).json({
+          success: false,
+          message: `No hay suficiente cantidad del producto ${product.name}. Solo quedan ${product.amount} unidades.`
+        });
+      }
+
       const totalPrice = product.price * item.quantity;
       products.push({
         product: product._id,
+        name: product.name,
         quantity: item.quantity,
         totalPrice: totalPrice
       });
+
       totalAmount += totalPrice;
-    });
+
+      product.amount -= item.quantity;
+      product.sold += item.quantity;
+
+      if (product.amount <= 0) {
+        product.status = "UNAVAILABLE";
+      }
+
+      await product.save();
+    }
 
     const newInvoice = new Invoice({
       name: name,
       nit: nit,
-      date: new Date(date),
+      date: date,
       cart: cart._id,
       products: products,
       totalAmount: totalAmount
@@ -52,32 +72,32 @@ export const createBillFromCart = async (req, res) => {
 
     await newInvoice.save();
 
-    const invoiceData = [
-      ["Factura", newInvoice.name],
-      ["NIT", newInvoice.nit],
-      ["Fecha", new Date(newInvoice.date).toLocaleDateString()],
-      ["Productos", ""],
-      ["Nombre", "Cantidad", "Precio Total"],
-      ...products.map(product => [
-        product.product.toString(),
-        product.quantity,
-        product.totalPrice
-      ]),
-      ["Total", "", totalAmount]
-    ];
-
-    const ws = XLSX.utils.aoa_to_sheet(invoiceData);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Factura");
+    const doc = new PDFDocument();
 
     const billFolder = path.join(__dirname, "../../Bill");
-
     if (!fs.existsSync(billFolder)) {
       fs.mkdirSync(billFolder);
     }
 
-    const filePath = path.join(billFolder, `Factura_${newInvoice._id}.xlsx`);
-    XLSX.writeFile(wb, filePath);
+    const filePath = path.join(billFolder, `Factura_${newInvoice._id}.pdf`);
+    doc.pipe(fs.createWriteStream(filePath));
+
+    doc.fontSize(18).text(`Factura a nombre de: ${newInvoice.name}`, { align: 'center' });
+    doc.fontSize(12).text(`Fecha: ${new Date(newInvoice.date).toLocaleDateString()}`, { align: 'center' });
+    doc.text(`NIT: ${newInvoice.nit}\n`, { align: 'center' });
+    doc.text('------------------------------------------------------------\n', { align: 'center' });
+
+    doc.text('Productos                Cantidad    Precio Total', { align: 'left' });
+    doc.text('------------------------------------------------------------', { align: 'left' });
+
+    products.forEach(product => {
+      doc.text(`${product.name}         ${product.quantity}                 Q${product.totalPrice.toFixed(2)}`, { align: 'left' });
+    });
+
+    doc.text('------------------------------------------------------------', { align: 'left' });
+    doc.text(`Total: Q${totalAmount.toFixed(2)}`, { align: 'left' });
+
+    doc.end();
 
     return res.status(200).json({
       success: true,
@@ -103,10 +123,21 @@ export const listBills = async (req, res) => {
       return res.status(404).json({ success: false, message: "No se encontraron facturas." });
     }
 
+    const invoicesWithPdfPath = invoices.map(invoice => {
+      const filePath = path.join(__dirname, "../../Bill", `Factura_${invoice._id}.pdf`);
+
+      const fileExists = fs.existsSync(filePath);
+
+      return {
+        ...invoice.toObject(),
+        pdfPath: fileExists ? filePath : null
+      };
+    });
+
     return res.status(200).json({
       success: true,
       message: "Facturas obtenidas con éxito.",
-      invoices
+      invoices: invoicesWithPdfPath
     });
   } catch (err) {
     return res.status(500).json({

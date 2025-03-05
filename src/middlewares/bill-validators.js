@@ -7,7 +7,7 @@ import { hasRoles } from "./validate-roles.js";
 
 export const createBillValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("USER_ROLE"),
     validarCampos,
     handleErrors
 ];

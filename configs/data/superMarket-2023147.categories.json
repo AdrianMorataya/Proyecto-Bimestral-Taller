@@ -3,7 +3,11 @@
     "$oid": "67ad20c45447df662d703b10"
   },
   "name": "Sin Categoría",
-  "products": []
+  "products": [
+    {
+      "$oid": "67c77e1046aeee9b93ecb32d"
+    }
+  ]
 },
 {
   "_id": {
@@ -36,6 +40,9 @@
     },
     {
       "$oid": "67bf788bc9d3492f5d22c4f8"
+    },
+    {
+      "$oid": "67c61f543b2a713a236971ab"
     }
   ]
 },
@@ -51,7 +58,14 @@
     "$oid": "67c616833b2a713a23697198"
   },
   "name": "Zapatos",
-  "products": []
+  "products": [
+    {
+      "$oid": "67c61fca3b2a713a236971b3"
+    },
+    {
+      "$oid": "67c61fdb3b2a713a236971b8"
+    }
+  ]
 },
 {
   "_id": {
@@ -86,5 +100,23 @@
     "$oid": "67c61ec83b2a713a236971a7"
   },
   "name": "Cocina",
-  "products": []
+  "products": [
+    {
+      "$oid": "67c61ffe3b2a713a236971bd"
+    },
+    {
+      "$oid": "67c620103b2a713a236971c2"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c7748b63e3dce77dd02f39"
+  },
+  "name": "Electrodomesticos",
+  "products": [
+    {
+      "$oid": "67c774c463e3dce77dd02f40"
+    }
+  ]
 }]

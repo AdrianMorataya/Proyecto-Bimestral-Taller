@@ -145,9 +145,9 @@
   "name": "Nike Travis Scott",
   "description": "Zapatos Nike",
   "price": 5000,
-  "amount": 1,
-  "sold": 0,
-  "status": "AVAILABLE",
+  "amount": 0,
+  "sold": 23,
+  "status": "UNAVAILABLE",
   "categorys": {
     "$oid": "67c616833b2a713a23697198"
   },
@@ -155,7 +155,7 @@
     "$date": "2025-03-03T21:32:11.611Z"
   },
   "updatedAt": {
-    "$date": "2025-03-03T21:32:11.611Z"
+    "$date": "2025-03-05T21:45:53.301Z"
   }
 },
 {
@@ -196,5 +196,105 @@
   },
   "updatedAt": {
     "$date": "2025-03-03T21:33:04.958Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c774c463e3dce77dd02f40"
+  },
+  "name": "Microondas",
+  "description": "Microondas",
+  "price": 2500,
+  "amount": 25,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67c7748b63e3dce77dd02f39"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T21:46:44.634Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T21:46:44.634Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c77b9203ad48ff7790a89f"
+  },
+  "name": "Lapicero",
+  "description": "Para escribir",
+  "price": 5,
+  "amount": 25,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67ad20c45447df662d703b10"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T22:15:46.836Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T22:15:46.836Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c77c3594ca8ab356c61b31"
+  },
+  "name": "Hoja de papel",
+  "description": "Para escribir",
+  "price": 5,
+  "amount": 25,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67ad20c45447df662d703b10"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T22:18:29.324Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T22:18:29.324Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c77d7831a57a3de79136e8"
+  },
+  "name": "Toalla",
+  "description": "Para secarse",
+  "price": 50,
+  "amount": 250,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67ad20c45447df662d703b10"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T22:23:52.924Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T22:23:52.924Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c77e1046aeee9b93ecb32d"
+  },
+  "name": "Audifonos",
+  "description": "Para la musica",
+  "price": 500,
+  "amount": 250,
+  "sold": 0,
+  "status": "AVAILABLE",
+  "categorys": {
+    "$oid": "67ad20c45447df662d703b10"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T22:26:24.364Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T22:26:24.364Z"
   }
 }]
